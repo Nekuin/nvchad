@@ -1,12 +1,13 @@
 local plugins = {
   {
-    "tpope/vim-fugitive", lazy = false
+    "tpope/vim-fugitive",
+    lazy = false,
   },
   {
     "github/copilot.vim",
     lazy = false,
     config = function()
-      local is_windows = package.config:sub(1,1) == '\\'
+      local is_windows = package.config:sub(1, 1) == "\\"
       -- Mapping tab is already used by NvChad
       vim.g.copilot_no_tab_map = true
       vim.g.copilot_assume_mapped = true
@@ -23,6 +24,14 @@ local plugins = {
     build = "composer install --no-dev --optimize-autoloader",
     ft = "php",
   },
+  {
+    "nvim-tree/nvim-tree.lua",
+    opts = {
+      view = {
+        adaptive_size = true,
+      },
+    },
+  },
 }
 
-return plugins;
+return plugins
