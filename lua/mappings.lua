@@ -12,4 +12,6 @@ map("i", "<C-l>", function()
   vim.fn.feedkeys(vim.fn["copilot#Accept"](), "")
 end, { desc = "Copilot accept", replace_keycodes = true, nowait = true, silent = true, expr = true, noremap = true })
 
+map("n", "<leader>ap", "<cmd>:CopilotChatToggle<cr>", { desc = "CopilotChatToggle" })
+
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
