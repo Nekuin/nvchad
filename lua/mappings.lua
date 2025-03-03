@@ -14,4 +14,6 @@ end, { desc = "Copilot accept", replace_keycodes = true, nowait = true, silent =
 
 map("n", "<leader>ap", "<cmd>:CopilotChatToggle<cr>", { desc = "CopilotChatToggle" })
 
+map("n", "<leader>s", ':%s/<C-r><C-w>//g<Left><Left>', {desc = "Search and replace"})
+
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
